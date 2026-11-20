@@ -90,21 +90,20 @@ state = {
 notes = load_notes()
 
 # Верхняя панель управления
-hud = Text(
-    text='MySpace | Space: пауза | Колесо: масштаб | ПКМ: обзор | Клик по планете: карточка',
-    position=(-0.86, 0.47),
-    scale=0.95,
-    color=color.azure,
-)
-
 # Боковая карточка планеты
 panel = Entity(
     parent=camera.ui,
     model='quad',
     scale=(0.52, 0.68),
     position=(0.58, 0.02),
-    color=color.rgba(15, 22, 42, 220),
+    color=color.rgba(220, 230, 245, 240),
 )
+title_txt = Text(parent=camera.ui, text='', position=(0.35, 0.31), scale=1.35, color=color.rgb(15, 35, 95))
+info_txt = Text(parent=camera.ui, text='', position=(0.35, 0.24), scale=0.88, color=color.black)
+note_label = Text(parent=camera.ui, text='Заметка о планете:', position=(0.35, -0.05), scale=0.88, color=color.dark_gray)
+note_field = InputField(parent=camera.ui, position=(0.58, -0.13), scale=(0.46, 0.06))
+status_txt = Text(parent=camera.ui, text='', position=(0.35, -0.26), scale=0.82, color=color.rgb(0, 120, 40))
+
 title_txt = Text(parent=camera.ui, text='', position=(0.35, 0.31), scale=1.35, color=color.gold)
 info_txt = Text(parent=camera.ui, text='', position=(0.35, 0.24), scale=0.88, color=color.white)
 note_label = Text(parent=camera.ui, text='Заметка о планете:', position=(0.35, -0.05), scale=0.88, color=color.light_gray)
